@@ -1,0 +1,4 @@
+Investigate security vulnerabilities in bWAPP:
+-Explored broken authentication using CAPTCHA bypass.
+-Explored broken authentication using Insecure login form.
+-Explored broken authentication using Logout management and password attack.
