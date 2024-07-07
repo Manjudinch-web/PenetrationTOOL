@@ -1,0 +1,32 @@
+# Install Mutillidae on Windows in Parallels Desktop
+
+## Prerequisites
+1. Parallels Desktop with Windows VM.
+2. GitHub account.
+3. Git installed on Windows VM.
+4. Parallels Tools installed.
+
+## Steps
+
+### 1. Set Up the Windows Environment
+- **Install XAMPP**
+  - Download XAMPP from [Apache Friends](https://www.apachefriends.org/index.html).
+  - Run the installer and follow instructions to install XAMPP.
+
+- **Start XAMPP**
+  - Open XAMPP Control Panel.
+  - Start Apache and MySQL services.
+
+### 2. Download and Set Up Mutillidae
+- **Download Mutillidae**
+  - Open browser in Windows VM.
+  - Navigate to [Mutillidae II GitHub](https://github.com/webpwnized/mutillidae).
+  - Click "Code" > "Download ZIP".
+
+- **Extract Mutillidae**
+  - Extract the ZIP file to `htdocs` directory in XAMPP installation (e.g., `C:\xampp\htdocs`).
+
+- **Configure Mutillidae**
+  - Open browser and go to `http://localhost/mutillidae`.
+  - Follow setup instructions provided by Mutillidae.
+## Initial commit of Mutillidae on 2024-07-06.
