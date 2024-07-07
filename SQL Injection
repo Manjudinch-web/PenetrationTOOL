@@ -1,0 +1,15 @@
+Hey folks, check out these awesome SQL injection experiments I just did on Mutillidae:
+
+#feat: Explored SQL Injection on Mutillidae Dashboard
+
+Implemented SQL injection techniques to test security vulnerabilities on the Mutillidae dashboard login/registration page. Successfully extracted user information from the database by bypassing input validations. Explored various injection payloads to understand the scope of potential vulnerabilities and their impact.
+
+Documentation and findings added to our cybersecurity research repository.
+
+#feat: Successfully Bypassed Authentication via SQL Injection
+
+Implemented SQL injection on Mutillidae's login page to bypass authentication. Utilized the classic payload ' or '1=1 to gain unauthorized access by circumventing the login checks.
+
+Demonstrated the critical vulnerability and emphasized the importance of robust input validation and secure coding practices. 
+
+Detailed findings documented for further analysis and mitigation strategies in our cybersecurity repository.
