@@ -1,0 +1,27 @@
+Local File Inclusion
+
+The objective already told us where the five quotes are: ../hackable/flags/fi.php. Let's start there, by passing in that exact path to the page parameter.
+
+http://dvwa/dvwa/vulnerabilities/fi/?page=../hackable/flags/fi.php
+
+
+
+Hm, nothing got pulled in? Strange. Why do you think that is?
+
+If you look carefully, you'll notice that we set the root directory of DVWA to /dvwa/. Therefore, the challenge is located at /dvwa/vulnerabilities/fi/. But wait, DVWA gave us the following path for the flags: /dvwa/hackable/flags/fi.php. What happened? Essentially, DVWA placed our current challenge two levels deep from the root. However, we only navigated up one directory in our attempted exploit. We'll actually need to go up two levels to find the /hackable/ directory, not just one.
+
+Note: if you didn't deduce this yourself, you could use an automatic tool like "fimap" to "brute force" how many directories you'll need to traverse.
+
+Let's modify the URL as follows:
+
+http://dvwa/dvwa/vulnerabilities/fi/?page=../../hackable/flags/fi.php
+
+
+
+Success ... partially? We can clearly see quotes #1, #2, and #4. #3 seems to have been hidden in some manner, and we don't see #5 at all. Let's examine the source code (Right-click > "Inspect Element") and see if we can find out what happened to the missing quotes.
+
+
+
+Aha! #5 shows up in the source! It's commented out, which means your average end user wouldn't see it. But #3 still doesn't appear. That must mean the server-side code is obfuscating it in some manner.
+
+What can we do to view the server-side source code? I think it's time for my favorite kind of exploit ...
