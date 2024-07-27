@@ -1,0 +1,28 @@
+- Reviewed and analyzed the backend PHP code for the user poll script.
+- Verified that the code works as intended.
+
+### Identified Vulnerabilities:
+1. **Cross-Site Scripting (XSS):**
+   - Outputs user data without proper encoding in some cases.
+   - **Mitigation:** Ensure all outputs are encoded to prevent XSS attacks.
+
+2. **Cross-Site Request Forgery (CSRF):**
+   - Uses CSRF tokens but does not always validate them properly.
+   - **Mitigation:** Ensure CSRF tokens are validated correctly for all requests.
+
+3. **Application Exception Output:**
+   - Detailed error messages are displayed, which can leak sensitive information.
+   - **Mitigation:** Handle exceptions properly and avoid displaying detailed error messages.
+
+4. **HTML Injection:**
+   - User inputs are directly included in the HTML without sanitization.
+   - **Mitigation:** Sanitize all user inputs before including them in the HTML output.
+
+5. **HTTP Parameter Pollution:**
+   - Detects parameter pollution but does not prevent it in insecure modes.
+   - **Mitigation:** Ensure parameter pollution is prevented or handled securely.
+
+6. **SQL Injection:**
+   - Direct use of user inputs (`$lUserChoice`, `$lLoggedInUser`) in SQL queries without sanitization or using prepared statements.
+   - **Mitigation:** Use prepared statements and parameterized queries.
+
