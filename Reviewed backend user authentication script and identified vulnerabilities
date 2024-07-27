@@ -1,0 +1,23 @@
+- Read and analyzed the backend PHP code for user authentication and information retrieval.
+- Verified that the code works as intended.
+
+### Identified Vulnerabilities:
+1. **SQL Injection:**
+   - Direct use of user inputs (`$lUsername` and `$lPassword`) in SQL queries without sanitization or using prepared statements.
+   - **Mitigation:** Use prepared statements and parameterized queries.
+
+2. **Cross-Site Scripting (XSS):**
+   - Outputs user data without proper encoding in some cases.
+   - **Mitigation:** Ensure all outputs are encoded to prevent XSS attacks.
+
+3. **Method Tampering:**
+   - Uses `$_REQUEST`, which can accept both GET and POST data, allowing method tampering.
+   - **Mitigation:** Use `$_POST` explicitly to handle form data.
+
+4. **Client-Side Validation Bypass:**
+   - Relies on JavaScript for validation, which can be bypassed.
+   - **Mitigation:** Implement server-side validation for all inputs.
+
+5. **Insecure Form Method (GET):**
+   - Uses GET method in insecure levels, exposing sensitive information in the URL.
+   - **Mitigation:** Always use POST for forms handling sensitive data.
