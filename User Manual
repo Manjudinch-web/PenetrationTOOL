@@ -1,0 +1,4 @@
+- Documented the process of identifying and exploiting three vulnerabilities (SQL Injection, CSRF, Security Misconfiguration) using OWASP Mutillidae.
+- Included screenshots and descriptions for each vulnerability exploitation.
+Committed the user manual report to the repository.
+This documentation will serve as a guide for future reference for vulnerability testing.
