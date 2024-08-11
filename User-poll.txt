@@ -1,0 +1,8 @@
+switch ($_SESSION["security-level"]){
+    case "0": // Secure version of Case 0
+        $lEnableHTMLControls = TRUE;
+        $lEncodeOutput = TRUE;  // Enable output encoding to prevent XSS
+        $lProtectAgainstMethodTampering = TRUE;  // Protect against method tampering
+        $lHTTPParameterPollutionDetected = isParameterPollutionDetected($_SERVER['QUERY_STRING']);  // Detect HTTP Parameter Pollution
+        $lLoggedInUser = $MySQLHandler->escapeDangerousCharacters($logged_in_user);  // Sanitize user input to prevent SQL injection
+    break;
