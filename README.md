@@ -25,6 +25,19 @@ To make sure that the penetration testing is in line with industry best practice
 Provide a Risk Management Framework:
 Evaluate the vulnerabilities that have been found and place them in order of possible effect and likelihood of exploitation within a risk management framework. The project's objectives are to provide the organisation with advise on managing high-priority risks and a comprehensive knowledge of its risk profile.
 
+Software which is required:
+1.Xamp
+2.Any text editor
+
+Programming language which are required:
+-
+.Html
+.css
+.javascript
+.PHP
+.SQL
+
+
 Q1. Why error at deployment time?
 - please follow the installation guide properly for deployment. You may encounter different types of error; you need to fix all the error it shows during the installation process.
 02. xamp connection error?
